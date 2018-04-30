@@ -13,7 +13,7 @@
     <string name="username_empty_error_dialog_message">Username can\'t be empty</string>
     <string name="username_already_exists_error_dialog_message">Username already exists</string>
     <string name="username_doesnt_exists">No such user</string>
-    <string name="fields_cant_be_empty">Fields can not be emoty</string>
+    <string name="fields_cant_be_empty">Fields can not be empty and amount should be greater then zero</string>
     <string name="please_wait">Please, wait…</string>
     <string name="general_error">Problem with connection to server</string>
     <string name="logout">Logout</string>

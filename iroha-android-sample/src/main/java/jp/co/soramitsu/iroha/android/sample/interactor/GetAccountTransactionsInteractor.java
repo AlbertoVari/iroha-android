@@ -56,7 +56,7 @@ public class GetAccountTransactionsInteractor extends SingleInteractor<List<Tran
             UnsignedQuery accountBalanceQuery = modelQueryBuilder.creatorAccountId(username + "@" + DOMAIN_ID)
                     .queryCounter(BigInteger.valueOf(QUERY_COUNTER))
                     .createdTime(BigInteger.valueOf(currentTime))
-                    .getAccountTransactions(username + "@" + DOMAIN_ID)
+                    .getAccountAssetTransactions(username + "@" + DOMAIN_ID, "irh#" + DOMAIN_ID)
                     .build();
             ByteVector queryBlob = protoQueryHelper.signAndAddSignature(accountBalanceQuery, userKeys).blob();
             byte bquery[] = toByteArray(queryBlob);

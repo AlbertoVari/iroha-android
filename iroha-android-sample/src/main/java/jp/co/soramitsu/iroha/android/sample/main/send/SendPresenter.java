@@ -31,7 +31,7 @@ public class SendPresenter {
 
     void sendTransaction(String username, String amount) {
         String[] data = {username, amount};
-        if (!username.isEmpty() && !amount.isEmpty()) {
+        if (!username.isEmpty() && !amount.isEmpty() && Long.parseLong(amount) > 0) {
             if (!isEnoughBalance(Long.parseLong(amount))) {
                 fragment.didSendError(new Throwable(fragment.getString(R.string.not_enough_balance_error)));
             } else {
